@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D08478E2269616FF00FAB956 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08478E1269616FF00FAB956 /* RegisterViewController.swift */; };
+		D08478E52696170E00FAB956 /* RegisterViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D08478E42696170E00FAB956 /* RegisterViewController.storyboard */; };
 		EE80EC602695C6B500937DC0 /* DirectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE80EC5F2695C6B500937DC0 /* DirectionViewController.swift */; };
 		EE80EC622695C6C700937DC0 /* DirectionViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE80EC612695C6C700937DC0 /* DirectionViewController.storyboard */; };
 		FA461DDE2695A81F0099656D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA461DDD2695A81F0099656D /* AppDelegate.swift */; };
@@ -29,6 +31,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D08478E1269616FF00FAB956 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		D08478E42696170E00FAB956 /* RegisterViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RegisterViewController.storyboard; sourceTree = "<group>"; };
 		EE80EC5F2695C6B500937DC0 /* DirectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectionViewController.swift; sourceTree = "<group>"; };
 		EE80EC612695C6C700937DC0 /* DirectionViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DirectionViewController.storyboard; sourceTree = "<group>"; };
 		FA461DDA2695A81F0099656D /* MapKitTeamWork.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MapKitTeamWork.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -64,6 +68,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D08478E0269616E900FAB956 /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				D08478E1269616FF00FAB956 /* RegisterViewController.swift */,
+				D08478E42696170E00FAB956 /* RegisterViewController.storyboard */,
+			);
+			path = Register;
+			sourceTree = "<group>";
+		};
 		EE80EC5E2695C6A400937DC0 /* Direction */ = {
 			isa = PBXGroup;
 			children = (
@@ -179,6 +192,7 @@
 		FA461E062695AAB10099656D /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				D08478E0269616E900FAB956 /* Register */,
 				EE80EC5E2695C6A400937DC0 /* Direction */,
 				FA461E092695AAF40099656D /* Base */,
 				FA461E072695AAD20099656D /* Main */,
@@ -302,6 +316,7 @@
 			files = (
 				FA461DEA2695A8200099656D /* LaunchScreen.storyboard in Resources */,
 				EE80EC622695C6C700937DC0 /* DirectionViewController.storyboard in Resources */,
+				D08478E52696170E00FAB956 /* RegisterViewController.storyboard in Resources */,
 				FA461DE72695A8200099656D /* Assets.xcassets in Resources */,
 				FA461DE52695A81F0099656D /* MainViewController.storyboard in Resources */,
 			);
@@ -320,6 +335,7 @@
 				FA461DDE2695A81F0099656D /* AppDelegate.swift in Sources */,
 				FA461DF82695A90C0099656D /* AppCoordinator.swift in Sources */,
 				FA461E0D2695ACFB0099656D /* NetworkManager.swift in Sources */,
+				D08478E2269616FF00FAB956 /* RegisterViewController.swift in Sources */,
 				EE80EC602695C6B500937DC0 /* DirectionViewController.swift in Sources */,
 				FA461DF62695A8EF0099656D /* CoordinatorProtocol.swift in Sources */,
 				FA461E0B2695AB570099656D /* BaseViewController.swift in Sources */,
@@ -478,6 +494,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 263CT2AHC6;
 				INFOPLIST_FILE = "MapKitTeamWork/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -499,6 +516,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 263CT2AHC6;
 				INFOPLIST_FILE = "MapKitTeamWork/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
