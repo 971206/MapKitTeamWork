@@ -16,20 +16,51 @@ class ShareLocationViewController: BaseViewController {
     
     //MARK: - Private Properties
     private var locationManager: CLLocationManager?
+    private var regionInMeters: Double = 1000000
     private var lat: Double?
     private var lng: Double?
-    private var globalLocations: CLLocationCoordinate2D?
     
     
     //MARK: - VC Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        locationManager = CLLocationManager()
-        locationManager?.requestAlwaysAuthorization()
-        locationManager?.delegate = self
+        mapView.delegate  = self
+        setupLocationManager()
+        mapView.showsUserLocation = true
+        setupAnnotation()
         self.navigationController?.isNavigationBarHidden = true
     }
     
+    private func setupLocationManager() {
+        locationManager?.requestAlwaysAuthorization()
+        locationManager?.delegate = self
+        locationManager?.desiredAccuracy = kCLLocationAccuracyBest
+    }
+
+    //MARK: - Setup Annotation
+    private func setupAnnotation() {
+        let centerLocation = CLLocationCoordinate2D(latitude: 41.716667, longitude: 44.783333)
+                let region = MKCoordinateRegion.init(center: centerLocation,
+                                                     latitudinalMeters: regionInMeters,
+                                                     longitudinalMeters: regionInMeters)
+          mapView.setRegion(region, animated: true)
+          let pin = Pin(title:" Location", coordinate: centerLocation)
+          mapView.addAnnotation(pin)
+    }
+    
+
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+          if annotation is Pin {
+              let pinAnnotationView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: "myPin")
+              pinAnnotationView.pinTintColor = .red
+              pinAnnotationView.isDraggable = true
+              pinAnnotationView.canShowCallout = true
+              pinAnnotationView.animatesDrop = true
+              return pinAnnotationView
+          }
+          return nil
+      }
+
     //MARK: - IBActions
     @IBAction func onShare(_ sender: Any) {
         shareButtonTapped()
@@ -61,11 +92,21 @@ class ShareLocationViewController: BaseViewController {
     }
 }
 
-//MARK: - CLLocationManagerDelegate Extension
-extension ShareLocationViewController: CLLocationManagerDelegate {
+//MARK: - CLLocationManagerDelegate and MKMapViewDelegate Extension
+extension ShareLocationViewController: CLLocationManagerDelegate, MKMapViewDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         guard let location = locations.last else {return}
         self.lat = location.coordinate.latitude
         self.lng = location.coordinate.longitude
     }
+    
+    func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, didChange newState: MKAnnotationView.DragState, fromOldState oldState: MKAnnotationView.DragState) {
+          switch newState {
+          case .starting:
+              view.dragState = .dragging
+          case .ending, .canceling:
+              view.dragState = .none
+          default: break
+          }
+      }
 }

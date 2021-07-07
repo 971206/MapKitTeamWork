@@ -26,6 +26,7 @@
 		FAE7730B2695BFEA006163E0 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAE7730A2695BFEA006163E0 /* MapKit.framework */; };
 		FAE7730E2695CA32006163E0 /* ShareLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE7730D2695CA32006163E0 /* ShareLocationViewController.swift */; };
 		FAE773102695CA3C006163E0 /* ShareLocationViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAE7730F2695CA3C006163E0 /* ShareLocationViewController.storyboard */; };
+		FAE77313269602E4006163E0 /* Pin.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE77312269602E4006163E0 /* Pin.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,7 @@
 		FAE7730A2695BFEA006163E0 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		FAE7730D2695CA32006163E0 /* ShareLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareLocationViewController.swift; sourceTree = "<group>"; };
 		FAE7730F2695CA3C006163E0 /* ShareLocationViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ShareLocationViewController.storyboard; sourceTree = "<group>"; };
+		FAE77312269602E4006163E0 /* Pin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pin.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 		FA461DF22695A8780099656D /* Infrastructure */ = {
 			isa = PBXGroup;
 			children = (
+				FAE77311269602D7006163E0 /* Pin */,
 				FA461DFD2695A9D90099656D /* Extensions */,
 				FA461DF42695A8A50099656D /* Coordinator */,
 				FA461DF32695A8830099656D /* Networking */,
@@ -243,6 +246,14 @@
 			path = ShareLocation;
 			sourceTree = "<group>";
 		};
+		FAE77311269602D7006163E0 /* Pin */ = {
+			isa = PBXGroup;
+			children = (
+				FAE77312269602E4006163E0 /* Pin.swift */,
+			);
+			path = Pin;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -314,6 +325,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAE77313269602E4006163E0 /* Pin.swift in Sources */,
 				FA461DE22695A81F0099656D /* MainViewController.swift in Sources */,
 				FA461E002695AA0A0099656D /* UITableView + Extension.swift in Sources */,
 				FA461E112695AD190099656D /* CountryModel.swift in Sources */,
