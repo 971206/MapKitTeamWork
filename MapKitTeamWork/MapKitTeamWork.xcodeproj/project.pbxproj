@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		63352C0026962A2000C24F21 /* MapViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63352BFF26962A2000C24F21 /* MapViewController.storyboard */; };
+		63352C0026962A2000C24F21 /* MyMapViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63352BFF26962A2000C24F21 /* MyMapViewController.storyboard */; };
 		63352C0226962CD900C24F21 /* MyMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63352C0126962CD900C24F21 /* MyMapViewController.swift */; };
 		6383CFD32695C70F0059345F /* FirstViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6383CFCC2695C70F0059345F /* FirstViewController.storyboard */; };
 		6383CFD42695C70F0059345F /* FirstCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6383CFCF2695C70F0059345F /* FirstCell.xib */; };
@@ -36,7 +36,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		63352BFF26962A2000C24F21 /* MapViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MapViewController.storyboard; sourceTree = "<group>"; };
+		63352BFF26962A2000C24F21 /* MyMapViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MyMapViewController.storyboard; sourceTree = "<group>"; };
 		63352C0126962CD900C24F21 /* MyMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyMapViewController.swift; sourceTree = "<group>"; };
 		6383CFCD2695C70F0059345F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/FirstViewController.storyboard; sourceTree = "<group>"; };
 		6383CFCF2695C70F0059345F /* FirstCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FirstCell.xib; sourceTree = "<group>"; };
@@ -82,7 +82,7 @@
 			isa = PBXGroup;
 			children = (
 				63352C0126962CD900C24F21 /* MyMapViewController.swift */,
-				63352BFF26962A2000C24F21 /* MapViewController.storyboard */,
+				63352BFF26962A2000C24F21 /* MyMapViewController.storyboard */,
 			);
 			path = myMap;
 			sourceTree = "<group>";
@@ -355,7 +355,7 @@
 			files = (
 				6383CFD32695C70F0059345F /* FirstViewController.storyboard in Resources */,
 				FA461DEA2695A8200099656D /* LaunchScreen.storyboard in Resources */,
-				63352C0026962A2000C24F21 /* MapViewController.storyboard in Resources */,
+				63352C0026962A2000C24F21 /* MyMapViewController.storyboard in Resources */,
 				FA461DE72695A8200099656D /* Assets.xcassets in Resources */,
 				FA461DE52695A81F0099656D /* MainViewController.storyboard in Resources */,
 				6383CFD42695C70F0059345F /* FirstCell.xib in Resources */,

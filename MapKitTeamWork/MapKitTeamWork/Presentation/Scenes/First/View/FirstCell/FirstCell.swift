@@ -30,8 +30,8 @@ class FirstCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func configure(with item: FirstViewModel) {
-        countryNameLabel.text = item.name
+    func configure(with item: CountryModel) {
+        countryNameLabel.text = item.country
         capitalNameLabel.text = item.capital
 
       

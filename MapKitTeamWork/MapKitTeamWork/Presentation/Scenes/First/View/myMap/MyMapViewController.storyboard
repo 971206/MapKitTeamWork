@@ -9,33 +9,33 @@
     </dependencies>
     <scenes>
         <!--My Map View Controller-->
-        <scene sceneID="s0d-6b-0kx">
+        <scene sceneID="GMW-pm-Ooh">
             <objects>
-                <viewController storyboardIdentifier="MyMapViewController" id="Y6W-OH-hqX" customClass="MyMapViewController" customModule="MapKitTeamWork" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                <viewController storyboardIdentifier="MyMapViewController" id="5OJ-JC-guG" customClass="MyMapViewController" customModule="MapKitTeamWork" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zno-3r-6bm">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="7U9-89-3FU">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="ZC4-12-ANQ">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                             </mapView>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <viewLayoutGuide key="safeArea" id="EFZ-9i-OGg"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="7U9-89-3FU" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="4DQ-MN-Mv2"/>
-                            <constraint firstAttribute="bottom" secondItem="7U9-89-3FU" secondAttribute="bottom" id="Hi1-Yc-oUf"/>
-                            <constraint firstItem="7U9-89-3FU" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="bZM-0o-1TK"/>
-                            <constraint firstItem="7U9-89-3FU" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="xmE-qm-zVK"/>
+                            <constraint firstItem="ZC4-12-ANQ" firstAttribute="leading" secondItem="EFZ-9i-OGg" secondAttribute="leading" id="1uH-5t-7fT"/>
+                            <constraint firstItem="EFZ-9i-OGg" firstAttribute="trailing" secondItem="ZC4-12-ANQ" secondAttribute="trailing" id="hKN-AK-giC"/>
+                            <constraint firstItem="ZC4-12-ANQ" firstAttribute="top" secondItem="EFZ-9i-OGg" secondAttribute="top" id="mOE-nP-DXO"/>
+                            <constraint firstItem="EFZ-9i-OGg" firstAttribute="bottom" secondItem="ZC4-12-ANQ" secondAttribute="bottom" id="uIy-ka-ixb"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="mapView" destination="7U9-89-3FU" id="ao2-vR-zVt"/>
+                        <outlet property="myMap" destination="ZC4-12-ANQ" id="iEt-ro-UFY"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="V8o-8F-vOi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="24.637681159420293" y="87.723214285714278"/>
+            <point key="canvasLocation" x="-701" y="199"/>
         </scene>
     </scenes>
     <resources>

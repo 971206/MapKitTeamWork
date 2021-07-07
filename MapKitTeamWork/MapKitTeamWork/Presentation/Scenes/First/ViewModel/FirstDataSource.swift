@@ -12,23 +12,34 @@ class FirstDataSource: NSObject, UITableViewDataSource {
     // MARK: - Private properties
     
     private var tableView: UITableView!
-    private var viewModel: FirstViewModelProtocol!
+//    private var viewModel: FirstViewModelProtocol!
+    private var countriesManager: CountryManagerProtocol!
     
-    private var countriesList = [FirstViewModel]()
+    private var countriesList = [CountryModel]()
     
-    init(with tableView: UITableView, viewModel: FirstViewModelProtocol) {
+    init(with tableView: UITableView, manager: CountryManagerProtocol) {
         super.init()
         
         self.tableView = tableView
         self.tableView.dataSource = self
         self.tableView.delegate = self
-        self.viewModel = viewModel
+        self.countriesManager = manager
     }
     
     func refresh() {
-        viewModel.getCountriesList { countries in
-            self.countriesList.append(contentsOf: countries)
-            self.tableView.reloadData()
+       // countryManager = CountryManager()
+        countriesManager.fetchInfo { res in
+            switch res {
+            case .failure(let err):
+                print("Failed: \(err)")
+            case .success(let countries):
+                
+                self.countriesList = countries.map{$0}
+                
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
+                }
+            }
         }
     }
     
@@ -50,7 +61,11 @@ class FirstDataSource: NSObject, UITableViewDataSource {
 
 extension FirstDataSource: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print(indexPath.row)
+        let sb = UIStoryboard(name: "MyMapViewController", bundle: nil)
+        let vc = sb.instantiateViewController(withIdentifier: "MyMapViewController") as! MyMapViewController
+        vc.country = countriesList[indexPath.row].country
+        vc.coordinates = countriesList[indexPath.row].coordinates
+        //navigationController?.pushViewController(vc, animated: true)
     }
 }
 
