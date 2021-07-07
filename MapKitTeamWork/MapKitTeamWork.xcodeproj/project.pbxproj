@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		075DE4492695FE3900154A2D /* PinAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075DE4482695FE3900154A2D /* PinAnnotation.swift */; };
 		07BF3D422695C7BC002E9F0B /* SelectedCountryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BF3D412695C7BC002E9F0B /* SelectedCountryViewController.swift */; };
 		07BF3D442695C7C3002E9F0B /* SelectedCountryViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07BF3D432695C7C3002E9F0B /* SelectedCountryViewController.storyboard */; };
 		07BF3D4A2695C838002E9F0B /* SelectedCountryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BF3D482695C838002E9F0B /* SelectedCountryCell.swift */; };
@@ -35,6 +36,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		075DE4482695FE3900154A2D /* PinAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinAnnotation.swift; sourceTree = "<group>"; };
 		07BF3D412695C7BC002E9F0B /* SelectedCountryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedCountryViewController.swift; sourceTree = "<group>"; };
 		07BF3D432695C7C3002E9F0B /* SelectedCountryViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SelectedCountryViewController.storyboard; sourceTree = "<group>"; };
 		07BF3D482695C838002E9F0B /* SelectedCountryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedCountryCell.swift; sourceTree = "<group>"; };
@@ -76,6 +78,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		075DE4472695FDBB00154A2D /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				075DE4482695FE3900154A2D /* PinAnnotation.swift */,
+			);
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
 		07BF3D402695C799002E9F0B /* SelectedCountryScene */ = {
 			isa = PBXGroup;
 			children = (
@@ -165,6 +175,7 @@
 		FA461DF22695A8780099656D /* Infrastructure */ = {
 			isa = PBXGroup;
 			children = (
+				075DE4472695FDBB00154A2D /* CustomViews */,
 				FA461DFD2695A9D90099656D /* Extensions */,
 				FA461DF42695A8A50099656D /* Coordinator */,
 				FA461DF32695A8830099656D /* Networking */,
@@ -384,6 +395,7 @@
 				FA461DFA2695A9600099656D /* CoordinatorDelegate.swift in Sources */,
 				FA461DFC2695A9740099656D /* Storyboarded.swift in Sources */,
 				07BF3D522695D6AF002E9F0B /* SelectedCountryMapViewController.swift in Sources */,
+				075DE4492695FE3900154A2D /* PinAnnotation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

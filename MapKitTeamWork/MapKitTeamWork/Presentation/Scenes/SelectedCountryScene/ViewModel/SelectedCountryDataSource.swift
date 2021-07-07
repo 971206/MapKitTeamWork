@@ -21,7 +21,6 @@ class SelectedCountryDataSource: NSObject, UITableViewDataSource{
         self.tableView = tableView
         self.countries = countries
         self.viewModel = viewModel
-        self.spinner = spinner
         self.tableView.dataSource = self
         self.tableView.delegate = self
     }
