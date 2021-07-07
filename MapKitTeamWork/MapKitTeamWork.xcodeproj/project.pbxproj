@@ -23,6 +23,7 @@
 		FA461E0D2695ACFB0099656D /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA461E0C2695ACFB0099656D /* NetworkManager.swift */; };
 		FA461E112695AD190099656D /* CountryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA461E102695AD190099656D /* CountryModel.swift */; };
 		FA461E142695AD8B0099656D /* CountryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA461E132695AD8B0099656D /* CountryManager.swift */; };
+		FAE7730B2695BFEA006163E0 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAE7730A2695BFEA006163E0 /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		FA461E0C2695ACFB0099656D /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		FA461E102695AD190099656D /* CountryModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountryModel.swift; sourceTree = "<group>"; };
 		FA461E132695AD8B0099656D /* CountryManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountryManager.swift; sourceTree = "<group>"; };
+		FAE7730A2695BFEA006163E0 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAE7730B2695BFEA006163E0 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,6 +65,7 @@
 			children = (
 				FA461DDC2695A81F0099656D /* MapKitTeamWork */,
 				FA461DDB2695A81F0099656D /* Products */,
+				FAE773092695BFEA006163E0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -215,6 +219,14 @@
 				FA461E132695AD8B0099656D /* CountryManager.swift */,
 			);
 			path = APIManager;
+			sourceTree = "<group>";
+		};
+		FAE773092695BFEA006163E0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FAE7730A2695BFEA006163E0 /* MapKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
