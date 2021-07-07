@@ -6,25 +6,26 @@
 //
 
 import UIKit
+import MapKit
 
-class RegisterViewController: BaseViewController {
+
+class FirstViewController: BaseViewController {
     @IBOutlet weak var tableView: UITableView!
     
-    private var viewModel: RegisterViewModelProtocol!
+    private var viewModel: FirstViewModelProtocol!
     private var dataSource: FirstDataSource!
     private var countriesManager: CountryManagerProtocol!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
         setupLayout()
         configureViewModel()
     }
     
 
     private func setupLayout() {
-        tableView.registerNib(class: RegisterCell.self)
+        tableView.registerNib(class: FirstCell.self)
     }
     
     private func configureViewModel() {

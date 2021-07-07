@@ -7,13 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6383CFD32695C70F0059345F /* RegisterViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6383CFCC2695C70F0059345F /* RegisterViewController.storyboard */; };
-		6383CFD42695C70F0059345F /* RegisterCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6383CFCF2695C70F0059345F /* RegisterCell.xib */; };
-		6383CFD52695C70F0059345F /* RegisterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6383CFD02695C70F0059345F /* RegisterCell.swift */; };
-		6383CFD72695CABD0059345F /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6383CFD62695CABD0059345F /* RegisterViewController.swift */; };
+		63352C0026962A2000C24F21 /* MapViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63352BFF26962A2000C24F21 /* MapViewController.storyboard */; };
+		63352C0226962CD900C24F21 /* MyMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63352C0126962CD900C24F21 /* MyMapViewController.swift */; };
+		6383CFD32695C70F0059345F /* FirstViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6383CFCC2695C70F0059345F /* FirstViewController.storyboard */; };
+		6383CFD42695C70F0059345F /* FirstCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6383CFCF2695C70F0059345F /* FirstCell.xib */; };
+		6383CFD52695C70F0059345F /* FirstCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6383CFD02695C70F0059345F /* FirstCell.swift */; };
+		6383CFD72695CABD0059345F /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6383CFD62695CABD0059345F /* FirstViewController.swift */; };
 		6383CFE12695D0130059345F /* FirstDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6383CFDE2695D0130059345F /* FirstDataSource.swift */; };
-		6383CFE22695D0130059345F /* RegisterViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6383CFDF2695D0130059345F /* RegisterViewModelProtocol.swift */; };
-		6383CFE32695D0130059345F /* RegisterViewModell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6383CFE02695D0130059345F /* RegisterViewModell.swift */; };
+		6383CFE22695D0130059345F /* FirstViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6383CFDF2695D0130059345F /* FirstViewModelProtocol.swift */; };
+		6383CFE32695D0130059345F /* FirstViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6383CFE02695D0130059345F /* FirstViewModel.swift */; };
 		FA461DDE2695A81F0099656D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA461DDD2695A81F0099656D /* AppDelegate.swift */; };
 		FA461DE02695A81F0099656D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA461DDF2695A81F0099656D /* SceneDelegate.swift */; };
 		FA461DE22695A81F0099656D /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA461DE12695A81F0099656D /* MainViewController.swift */; };
@@ -34,13 +36,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		6383CFCD2695C70F0059345F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/RegisterViewController.storyboard; sourceTree = "<group>"; };
-		6383CFCF2695C70F0059345F /* RegisterCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegisterCell.xib; sourceTree = "<group>"; };
-		6383CFD02695C70F0059345F /* RegisterCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterCell.swift; sourceTree = "<group>"; };
-		6383CFD62695CABD0059345F /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		63352BFF26962A2000C24F21 /* MapViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MapViewController.storyboard; sourceTree = "<group>"; };
+		63352C0126962CD900C24F21 /* MyMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyMapViewController.swift; sourceTree = "<group>"; };
+		6383CFCD2695C70F0059345F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/FirstViewController.storyboard; sourceTree = "<group>"; };
+		6383CFCF2695C70F0059345F /* FirstCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FirstCell.xib; sourceTree = "<group>"; };
+		6383CFD02695C70F0059345F /* FirstCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstCell.swift; sourceTree = "<group>"; };
+		6383CFD62695CABD0059345F /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		6383CFDE2695D0130059345F /* FirstDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstDataSource.swift; sourceTree = "<group>"; };
-		6383CFDF2695D0130059345F /* RegisterViewModelProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewModelProtocol.swift; sourceTree = "<group>"; };
-		6383CFE02695D0130059345F /* RegisterViewModell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewModell.swift; sourceTree = "<group>"; };
+		6383CFDF2695D0130059345F /* FirstViewModelProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstViewModelProtocol.swift; sourceTree = "<group>"; };
+		6383CFE02695D0130059345F /* FirstViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstViewModel.swift; sourceTree = "<group>"; };
 		FA461DDA2695A81F0099656D /* MapKitTeamWork.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MapKitTeamWork.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA461DDD2695A81F0099656D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FA461DDF2695A81F0099656D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -74,21 +78,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		6383CFC62695C7010059345F /* Register */ = {
+		63352BFD26962A1100C24F21 /* myMap */ = {
+			isa = PBXGroup;
+			children = (
+				63352C0126962CD900C24F21 /* MyMapViewController.swift */,
+				63352BFF26962A2000C24F21 /* MapViewController.storyboard */,
+			);
+			path = myMap;
+			sourceTree = "<group>";
+		};
+		6383CFC62695C7010059345F /* First */ = {
 			isa = PBXGroup;
 			children = (
 				6383CFCA2695C70F0059345F /* View */,
 				6383CFC72695C70F0059345F /* ViewModel */,
 			);
-			path = Register;
+			path = First;
 			sourceTree = "<group>";
 		};
 		6383CFC72695C70F0059345F /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
 				6383CFDE2695D0130059345F /* FirstDataSource.swift */,
-				6383CFDF2695D0130059345F /* RegisterViewModelProtocol.swift */,
-				6383CFE02695D0130059345F /* RegisterViewModell.swift */,
+				6383CFDF2695D0130059345F /* FirstViewModelProtocol.swift */,
+				6383CFE02695D0130059345F /* FirstViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -96,20 +109,21 @@
 		6383CFCA2695C70F0059345F /* View */ = {
 			isa = PBXGroup;
 			children = (
-				6383CFCE2695C70F0059345F /* MainCell */,
-				6383CFCC2695C70F0059345F /* RegisterViewController.storyboard */,
-				6383CFD62695CABD0059345F /* RegisterViewController.swift */,
+				63352BFD26962A1100C24F21 /* myMap */,
+				6383CFCE2695C70F0059345F /* FirstCell */,
+				6383CFCC2695C70F0059345F /* FirstViewController.storyboard */,
+				6383CFD62695CABD0059345F /* FirstViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
 		};
-		6383CFCE2695C70F0059345F /* MainCell */ = {
+		6383CFCE2695C70F0059345F /* FirstCell */ = {
 			isa = PBXGroup;
 			children = (
-				6383CFCF2695C70F0059345F /* RegisterCell.xib */,
-				6383CFD02695C70F0059345F /* RegisterCell.swift */,
+				6383CFCF2695C70F0059345F /* FirstCell.xib */,
+				6383CFD02695C70F0059345F /* FirstCell.swift */,
 			);
-			path = MainCell;
+			path = FirstCell;
 			sourceTree = "<group>";
 		};
 		FA461DD12695A81F0099656D = {
@@ -218,7 +232,7 @@
 		FA461E062695AAB10099656D /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				6383CFC62695C7010059345F /* Register */,
+				6383CFC62695C7010059345F /* First */,
 				FA461E092695AAF40099656D /* Base */,
 				FA461E072695AAD20099656D /* Main */,
 			);
@@ -339,11 +353,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6383CFD32695C70F0059345F /* RegisterViewController.storyboard in Resources */,
+				6383CFD32695C70F0059345F /* FirstViewController.storyboard in Resources */,
 				FA461DEA2695A8200099656D /* LaunchScreen.storyboard in Resources */,
+				63352C0026962A2000C24F21 /* MapViewController.storyboard in Resources */,
 				FA461DE72695A8200099656D /* Assets.xcassets in Resources */,
 				FA461DE52695A81F0099656D /* MainViewController.storyboard in Resources */,
-				6383CFD42695C70F0059345F /* RegisterCell.xib in Resources */,
+				6383CFD42695C70F0059345F /* FirstCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -356,34 +371,35 @@
 			files = (
 				FA461DE22695A81F0099656D /* MainViewController.swift in Sources */,
 				FA461E002695AA0A0099656D /* UITableView + Extension.swift in Sources */,
-				6383CFE32695D0130059345F /* RegisterViewModell.swift in Sources */,
+				6383CFE32695D0130059345F /* FirstViewModel.swift in Sources */,
 				FA461E112695AD190099656D /* CountryModel.swift in Sources */,
 				6383CFE12695D0130059345F /* FirstDataSource.swift in Sources */,
 				FA461DDE2695A81F0099656D /* AppDelegate.swift in Sources */,
 				FA461DF82695A90C0099656D /* AppCoordinator.swift in Sources */,
+				63352C0226962CD900C24F21 /* MyMapViewController.swift in Sources */,
 				FA461E0D2695ACFB0099656D /* NetworkManager.swift in Sources */,
 				FA461DF62695A8EF0099656D /* CoordinatorProtocol.swift in Sources */,
 				FA461E0B2695AB570099656D /* BaseViewController.swift in Sources */,
-				6383CFE22695D0130059345F /* RegisterViewModelProtocol.swift in Sources */,
+				6383CFE22695D0130059345F /* FirstViewModelProtocol.swift in Sources */,
 				FA461E022695AA170099656D /* UITableViewCell + Extension.swift in Sources */,
 				FA461E142695AD8B0099656D /* CountryManager.swift in Sources */,
 				FA461DE02695A81F0099656D /* SceneDelegate.swift in Sources */,
 				FA461DFA2695A9600099656D /* CoordinatorDelegate.swift in Sources */,
 				FA461DFC2695A9740099656D /* Storyboarded.swift in Sources */,
-				6383CFD52695C70F0059345F /* RegisterCell.swift in Sources */,
-				6383CFD72695CABD0059345F /* RegisterViewController.swift in Sources */,
+				6383CFD52695C70F0059345F /* FirstCell.swift in Sources */,
+				6383CFD72695CABD0059345F /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		6383CFCC2695C70F0059345F /* RegisterViewController.storyboard */ = {
+		6383CFCC2695C70F0059345F /* FirstViewController.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				6383CFCD2695C70F0059345F /* Base */,
 			);
-			name = RegisterViewController.storyboard;
+			name = FirstViewController.storyboard;
 			sourceTree = "<group>";
 		};
 		FA461DE32695A81F0099656D /* MainViewController.storyboard */ = {

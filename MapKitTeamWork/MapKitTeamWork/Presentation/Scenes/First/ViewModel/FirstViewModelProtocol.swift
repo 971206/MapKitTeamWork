@@ -1,13 +1,14 @@
 //
 //  CountriesListViewModel.swift
-//  27AniMekvabidze
+//  MapKitTeamWork
 //
 //  Created by Mac User on 07.06.21.
 //
 
+
 import UIKit
 
-protocol RegisterViewModelProtocol: AnyObject {
+protocol FirstViewModelProtocol: AnyObject {
     func getCountriesList(completion: @escaping (([FirstViewModel]) -> Void))
     
     var didFinishedLoading: (() -> Void)? { get set }
@@ -15,7 +16,7 @@ protocol RegisterViewModelProtocol: AnyObject {
     init(with countriesManager: CountryManagerProtocol)
 }
 
-class FirstListViewModel: RegisterViewModelProtocol {
+class FirstListViewModel: FirstViewModelProtocol {
     
     // MARK: - Private properties
     
@@ -31,6 +32,7 @@ class FirstListViewModel: RegisterViewModelProtocol {
     
     func getCountriesList(completion: @escaping (([FirstViewModel]) -> Void)) {
         countriesManager.fetchInfo{ countries in
+            
             DispatchQueue.main.async {
                 let countriesViewModels = countries.map { FirstViewModel(country: $0) }
                 print(countriesViewModels)

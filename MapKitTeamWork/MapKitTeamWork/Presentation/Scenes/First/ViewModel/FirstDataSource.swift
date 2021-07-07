@@ -1,6 +1,6 @@
 //
 //  CountriesDataSource.swift
-//  27AniMekvabidze
+//  MapKitTeamWork
 //
 //  Created by Mac User on 07.06.21.
 //
@@ -12,11 +12,11 @@ class FirstDataSource: NSObject, UITableViewDataSource {
     // MARK: - Private properties
     
     private var tableView: UITableView!
-    private var viewModel: RegisterViewModelProtocol!
+    private var viewModel: FirstViewModelProtocol!
     
     private var countriesList = [FirstViewModel]()
     
-    init(with tableView: UITableView, viewModel: RegisterViewModelProtocol) {
+    init(with tableView: UITableView, viewModel: FirstViewModelProtocol) {
         super.init()
         
         self.tableView = tableView
@@ -39,7 +39,7 @@ class FirstDataSource: NSObject, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.deque(RegisterCell.self, for: indexPath)
+        let cell = tableView.deque(FirstCell.self, for: indexPath)
         cell.configure(with: countriesList[indexPath.row])
         return cell
     }
