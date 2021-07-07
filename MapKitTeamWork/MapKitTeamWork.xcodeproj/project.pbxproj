@@ -33,6 +33,9 @@
 		FA461E112695AD190099656D /* CountryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA461E102695AD190099656D /* CountryModel.swift */; };
 		FA461E142695AD8B0099656D /* CountryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA461E132695AD8B0099656D /* CountryManager.swift */; };
 		FAE7730B2695BFEA006163E0 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAE7730A2695BFEA006163E0 /* MapKit.framework */; };
+		FAE7730E2695CA32006163E0 /* ShareLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE7730D2695CA32006163E0 /* ShareLocationViewController.swift */; };
+		FAE773102695CA3C006163E0 /* ShareLocationViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAE7730F2695CA3C006163E0 /* ShareLocationViewController.storyboard */; };
+		FAE77313269602E4006163E0 /* Pin.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE77312269602E4006163E0 /* Pin.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +67,9 @@
 		FA461E102695AD190099656D /* CountryModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountryModel.swift; sourceTree = "<group>"; };
 		FA461E132695AD8B0099656D /* CountryManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountryManager.swift; sourceTree = "<group>"; };
 		FAE7730A2695BFEA006163E0 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		FAE7730D2695CA32006163E0 /* ShareLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareLocationViewController.swift; sourceTree = "<group>"; };
+		FAE7730F2695CA3C006163E0 /* ShareLocationViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ShareLocationViewController.storyboard; sourceTree = "<group>"; };
+		FAE77312269602E4006163E0 /* Pin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pin.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -176,6 +182,7 @@
 			isa = PBXGroup;
 			children = (
 				075DE4472695FDBB00154A2D /* CustomViews */,
+				FAE77311269602D7006163E0 /* Pin */,
 				FA461DFD2695A9D90099656D /* Extensions */,
 				FA461DF42695A8A50099656D /* Coordinator */,
 				FA461DF32695A8830099656D /* Networking */,
@@ -241,6 +248,7 @@
 			children = (
 				07BF3D502695D695002E9F0B /* SelectedCountryMap */,
 				07BF3D402695C799002E9F0B /* SelectedCountryScene */,
+				FAE7730C2695CA1C006163E0 /* ShareLocation */,
 				FA461E092695AAF40099656D /* Base */,
 				FA461E072695AAD20099656D /* Main */,
 			);
@@ -304,6 +312,23 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		FAE7730C2695CA1C006163E0 /* ShareLocation */ = {
+			isa = PBXGroup;
+			children = (
+				FAE7730D2695CA32006163E0 /* ShareLocationViewController.swift */,
+				FAE7730F2695CA3C006163E0 /* ShareLocationViewController.storyboard */,
+			);
+			path = ShareLocation;
+			sourceTree = "<group>";
+		};
+		FAE77311269602D7006163E0 /* Pin */ = {
+			isa = PBXGroup;
+			children = (
+				FAE77312269602E4006163E0 /* Pin.swift */,
+			);
+			path = Pin;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -362,6 +387,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				07BF3D542695D6B6002E9F0B /* SelectedCountryMapViewController.storyboard in Resources */,
+				FAE773102695CA3C006163E0 /* ShareLocationViewController.storyboard in Resources */,
 				FA461DEA2695A8200099656D /* LaunchScreen.storyboard in Resources */,
 				FA461DE72695A8200099656D /* Assets.xcassets in Resources */,
 				07BF3D4B2695C838002E9F0B /* SelectedCountryCell.xib in Resources */,
@@ -377,11 +403,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAE77313269602E4006163E0 /* Pin.swift in Sources */,
 				FA461DE22695A81F0099656D /* MainViewController.swift in Sources */,
 				FA461E002695AA0A0099656D /* UITableView + Extension.swift in Sources */,
 				07BF3D4D2695D45B002E9F0B /* SelectedCountryDataSource.swift in Sources */,
 				FA461E112695AD190099656D /* CountryModel.swift in Sources */,
 				07BF3D4F2695D488002E9F0B /* SelectedCountryViewModel.swift in Sources */,
+				FAE7730E2695CA32006163E0 /* ShareLocationViewController.swift in Sources */,
 				FA461DDE2695A81F0099656D /* AppDelegate.swift in Sources */,
 				FA461DF82695A90C0099656D /* AppCoordinator.swift in Sources */,
 				FA461E0D2695ACFB0099656D /* NetworkManager.swift in Sources */,
