@@ -41,13 +41,13 @@ final class AppCoordinator: CoordinatorProtocol {
         navigationController?.navigationBar.isHidden = true
         navigationController?.pushViewController(vc, animated: true)
     }
-    
-    func myMapVC() {
-        let vc = MyMapViewController.instantiateFromStoryboard()
-        vc.coordinator = self
-        navigationController?.navigationBar.isHidden = true
-        navigationController?.pushViewController(vc, animated: true)
-    }
+//    
+//    func myMapVC() {
+//        let vc = MyMapViewController.instantiateFromStoryboard()
+//        vc.coordinator = self
+//        navigationController?.navigationBar.isHidden = true
+//        navigationController?.pushViewController(vc, animated: true)
+//    }
     
 
 }

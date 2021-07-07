@@ -17,7 +17,7 @@ protocol CoordinatorProtocol: AnyObject {
     func popViewController()
 
     func FirstRegisterVC()
-    func myMapVC()
+ //   func myMapVC()
 
   
 }

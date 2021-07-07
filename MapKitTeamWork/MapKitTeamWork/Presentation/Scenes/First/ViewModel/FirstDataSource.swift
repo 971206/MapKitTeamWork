@@ -24,10 +24,10 @@ class FirstDataSource: NSObject, UITableViewDataSource {
         self.tableView.dataSource = self
         self.tableView.delegate = self
         self.countriesManager = manager
+        refresh()
     }
     
     func refresh() {
-       // countryManager = CountryManager()
         countriesManager.fetchInfo { res in
             switch res {
             case .failure(let err):

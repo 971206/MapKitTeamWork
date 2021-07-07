@@ -14,8 +14,7 @@
 		6383CFD52695C70F0059345F /* FirstCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6383CFD02695C70F0059345F /* FirstCell.swift */; };
 		6383CFD72695CABD0059345F /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6383CFD62695CABD0059345F /* FirstViewController.swift */; };
 		6383CFE12695D0130059345F /* FirstDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6383CFDE2695D0130059345F /* FirstDataSource.swift */; };
-		6383CFE22695D0130059345F /* FirstViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6383CFDF2695D0130059345F /* FirstViewModelProtocol.swift */; };
-		6383CFE32695D0130059345F /* FirstViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6383CFE02695D0130059345F /* FirstViewModel.swift */; };
+		63B185112696570C0029AEC4 /* firstVCExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B185102696570C0029AEC4 /* firstVCExtension.swift */; };
 		FA461DDE2695A81F0099656D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA461DDD2695A81F0099656D /* AppDelegate.swift */; };
 		FA461DE02695A81F0099656D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA461DDF2695A81F0099656D /* SceneDelegate.swift */; };
 		FA461DE22695A81F0099656D /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA461DE12695A81F0099656D /* MainViewController.swift */; };
@@ -43,8 +42,7 @@
 		6383CFD02695C70F0059345F /* FirstCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstCell.swift; sourceTree = "<group>"; };
 		6383CFD62695CABD0059345F /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		6383CFDE2695D0130059345F /* FirstDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstDataSource.swift; sourceTree = "<group>"; };
-		6383CFDF2695D0130059345F /* FirstViewModelProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstViewModelProtocol.swift; sourceTree = "<group>"; };
-		6383CFE02695D0130059345F /* FirstViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstViewModel.swift; sourceTree = "<group>"; };
+		63B185102696570C0029AEC4 /* firstVCExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = firstVCExtension.swift; sourceTree = "<group>"; };
 		FA461DDA2695A81F0099656D /* MapKitTeamWork.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MapKitTeamWork.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA461DDD2695A81F0099656D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FA461DDF2695A81F0099656D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -100,8 +98,6 @@
 			isa = PBXGroup;
 			children = (
 				6383CFDE2695D0130059345F /* FirstDataSource.swift */,
-				6383CFDF2695D0130059345F /* FirstViewModelProtocol.swift */,
-				6383CFE02695D0130059345F /* FirstViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -110,9 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				63352BFD26962A1100C24F21 /* myMap */,
-				6383CFCE2695C70F0059345F /* FirstCell */,
-				6383CFCC2695C70F0059345F /* FirstViewController.storyboard */,
-				6383CFD62695CABD0059345F /* FirstViewController.swift */,
+				63B1850D269656520029AEC4 /* FirstVC */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -124,6 +118,17 @@
 				6383CFD02695C70F0059345F /* FirstCell.swift */,
 			);
 			path = FirstCell;
+			sourceTree = "<group>";
+		};
+		63B1850D269656520029AEC4 /* FirstVC */ = {
+			isa = PBXGroup;
+			children = (
+				6383CFCE2695C70F0059345F /* FirstCell */,
+				6383CFCC2695C70F0059345F /* FirstViewController.storyboard */,
+				6383CFD62695CABD0059345F /* FirstViewController.swift */,
+				63B185102696570C0029AEC4 /* firstVCExtension.swift */,
+			);
+			path = FirstVC;
 			sourceTree = "<group>";
 		};
 		FA461DD12695A81F0099656D = {
@@ -371,7 +376,6 @@
 			files = (
 				FA461DE22695A81F0099656D /* MainViewController.swift in Sources */,
 				FA461E002695AA0A0099656D /* UITableView + Extension.swift in Sources */,
-				6383CFE32695D0130059345F /* FirstViewModel.swift in Sources */,
 				FA461E112695AD190099656D /* CountryModel.swift in Sources */,
 				6383CFE12695D0130059345F /* FirstDataSource.swift in Sources */,
 				FA461DDE2695A81F0099656D /* AppDelegate.swift in Sources */,
@@ -379,8 +383,8 @@
 				63352C0226962CD900C24F21 /* MyMapViewController.swift in Sources */,
 				FA461E0D2695ACFB0099656D /* NetworkManager.swift in Sources */,
 				FA461DF62695A8EF0099656D /* CoordinatorProtocol.swift in Sources */,
+				63B185112696570C0029AEC4 /* firstVCExtension.swift in Sources */,
 				FA461E0B2695AB570099656D /* BaseViewController.swift in Sources */,
-				6383CFE22695D0130059345F /* FirstViewModelProtocol.swift in Sources */,
 				FA461E022695AA170099656D /* UITableViewCell + Extension.swift in Sources */,
 				FA461E142695AD8B0099656D /* CountryManager.swift in Sources */,
 				FA461DE02695A81F0099656D /* SceneDelegate.swift in Sources */,

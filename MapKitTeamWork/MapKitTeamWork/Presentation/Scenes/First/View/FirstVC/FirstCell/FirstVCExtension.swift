@@ -1,46 +1,13 @@
 //
-//  ViewController.swift
+//  FirstVCExtension.swift
 //  MapKitTeamWork
 //
-//  Created by Mac User on 7/7/21.
+//  Created by Mac User on 7/8/21.
 //
 
 import UIKit
-import MapKit
 
-
-class FirstViewController: BaseViewController {
-   // @IBOutlet weak var tableView: UITableView!
-    let tableView = UITableView()
-
-    @IBOutlet weak var ChooseCountry: UIButton!
-    var chosen = UIButton()
-    let transparentView = UIView()
-
-
-//    private var viewModel: FirstViewModelProtocol!
-    private var dataSource: FirstDataSource!
-    private var countriesManager: CountryManagerProtocol!
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        setupLayout()
-        configureViewModel()
-    }
-    
-
-    private func setupLayout() {
-        tableView.registerNib(class: FirstCell.self)
-    }
-    
-    private func configureViewModel() {
-        countriesManager = CountryManager()
-        // DI - Dependenc Injection
-//        viewModel = FirstListViewModel(with: countriesManager)
-        dataSource = FirstDataSource(with: tableView, manager: countriesManager)
-        
-    }
+extension FirstViewController {
     
     func transparentViewAdded(frames: CGRect) {
          transparentView.frame = self.view.frame
@@ -68,11 +35,4 @@ class FirstViewController: BaseViewController {
              self.tableView.frame = CGRect(x: frames.origin.x, y: frames.origin.y + frames.height, width: frames.width, height: 0)
          }, completion: nil)
     }
-
-    @IBAction func onChooseCountry(_ sender: Any) {
-        ChooseCountry = chosen
-        transparentViewAdded(frames: ChooseCountry.frame)
-    }
 }
-
-
