@@ -20,32 +20,27 @@ class FirstListViewModel: FirstViewModelProtocol {
     
     // MARK: - Private properties
     
-    private var countriesManager: CountryManagerProtocol!
+    private var countryManager: CountryManagerProtocol!
     
     // MARK: - Outputs
     
     var didFinishedLoading: (() -> Void)?
-            
-    required init(with countriesManager: CountryManagerProtocol)  {
-        self.countriesManager = countriesManager
+    
+    required init(with manager: CountryManagerProtocol)  {
+        self.countryManager = manager
     }
     
     func getCountriesList(completion: @escaping (([FirstViewModel]) -> Void)) {
-        countriesManager.fetchInfo{ countries in
-            switch countries {
-            case .success(_):
+        countryManager.fetchInfo { result  in
+            switch result {
+            case .failure(let err):
+                print("Failed: \(err)")
+            case .success(let v):
                 DispatchQueue.main.async {
-                    let countriesViewModels = countries.map { FirstViewModel(country: $0) }
-                    print(countriesViewModels)
-                    completion(countriesViewModels)
+                    self.countryManager = v.map{ $0 } 
 
                 }
-            case .failure(_):
-                print("Error")
-
             }
-            
+        }
     }
-    
- }
 }
