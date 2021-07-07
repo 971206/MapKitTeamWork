@@ -24,11 +24,17 @@ final class AppCoordinator: CoordinatorProtocol {
     }
     
     func start() {
-        let vc = MainViewController.instantiateFromStoryboard()
+        let vc = SelectedCountryViewController.instantiateFromStoryboard()
         vc.coordinator = self
         navigationController?.pushViewController(vc, animated: true)
         window?.rootViewController = navigationController
         window?.makeKeyAndVisible()
     }
     
+    func proceedToSelectedCountryMapVC(with country: CountryModel, coordinator: CoordinatorProtocol) {
+        let vc = SelectedCountryMapViewController.instantiateFromStoryboard()
+        vc.country = country
+        vc.coordinator = coordinator
+        navigationController?.pushViewController(vc, animated: true)
+    }
 }
