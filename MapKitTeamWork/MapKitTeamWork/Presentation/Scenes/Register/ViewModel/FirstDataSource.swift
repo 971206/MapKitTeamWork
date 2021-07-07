@@ -7,14 +7,14 @@
 
 import UIKit
 
-class RegisterDataSource: NSObject, UITableViewDataSource {
+class FirstDataSource: NSObject, UITableViewDataSource {
     
     // MARK: - Private properties
     
     private var tableView: UITableView!
     private var viewModel: RegisterViewModelProtocol!
     
-    private var countriesList = [RegisterViewModel]()
+    private var countriesList = [FirstViewModel]()
     
     init(with tableView: UITableView, viewModel: RegisterViewModelProtocol) {
         super.init()
@@ -48,7 +48,7 @@ class RegisterDataSource: NSObject, UITableViewDataSource {
 
 // MARK: - UITableViewDelegate
 
-extension RegisterDataSource: UITableViewDelegate {
+extension FirstDataSource: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print(indexPath.row)
     }

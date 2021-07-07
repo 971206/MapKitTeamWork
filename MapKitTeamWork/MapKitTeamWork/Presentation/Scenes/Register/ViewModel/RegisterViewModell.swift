@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct RegisterViewModel {
+struct FirstViewModel {
     
     private var country: CountryModel
     

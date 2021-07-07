@@ -8,14 +8,14 @@
 import UIKit
 
 protocol RegisterViewModelProtocol: AnyObject {
-    func getCountriesList(completion: @escaping (([RegisterViewModel]) -> Void))
+    func getCountriesList(completion: @escaping (([FirstViewModel]) -> Void))
     
     var didFinishedLoading: (() -> Void)? { get set }
     
     init(with countriesManager: CountryManagerProtocol)
 }
 
-class RegisterListViewModel: RegisterViewModelProtocol {
+class FirstListViewModel: RegisterViewModelProtocol {
     
     // MARK: - Private properties
     
@@ -29,13 +29,12 @@ class RegisterListViewModel: RegisterViewModelProtocol {
         self.countriesManager = countriesManager
     }
     
-    func getCountriesList(completion: @escaping (([RegisterViewModel]) -> Void)) {
+    func getCountriesList(completion: @escaping (([FirstViewModel]) -> Void)) {
         countriesManager.fetchInfo{ countries in
             DispatchQueue.main.async {
-//                let countriesViewModels = countries
-//                    //countries.map { RegisterViewModel(country: $0) }
-//                print(countriesViewModels)
-//                completion(countriesViewModels)
+                let countriesViewModels = countries.map { FirstViewModel(country: $0) }
+                print(countriesViewModels)
+                completion(countriesViewModels)
 
             }
         }

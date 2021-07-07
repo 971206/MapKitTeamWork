@@ -22,7 +22,7 @@ class RegisterCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func configure(with item: RegisterViewModel) {
+    func configure(with item: FirstViewModel) {
         countryNameLabel.text = item.name
       
     }
