@@ -31,4 +31,10 @@ final class AppCoordinator: CoordinatorProtocol {
         window?.makeKeyAndVisible()
     }
     
+    func proceedToSelectedCountryMapVC(with country: CountryModel, coordinator: CoordinatorProtocol) {
+        let vc = SelectedCountryMapViewController.instantiateFromStoryboard()
+        vc.country = country
+        vc.coordinator = coordinator
+        navigationController?.pushViewController(vc, animated: true)
+    }
 }
