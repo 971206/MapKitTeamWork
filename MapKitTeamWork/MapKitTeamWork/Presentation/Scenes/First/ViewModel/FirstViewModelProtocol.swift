@@ -32,15 +32,20 @@ class FirstListViewModel: FirstViewModelProtocol {
     
     func getCountriesList(completion: @escaping (([FirstViewModel]) -> Void)) {
         countriesManager.fetchInfo{ countries in
-            
-            DispatchQueue.main.async {
-                let countriesViewModels = countries.map { FirstViewModel(country: $0) }
-                print(countriesViewModels)
-                completion(countriesViewModels)
+            switch countries {
+            case .success(_):
+                DispatchQueue.main.async {
+                    let countriesViewModels = countries.map { FirstViewModel(country: $0) }
+                    print(countriesViewModels)
+                    completion(countriesViewModels)
+
+                }
+            case .failure(_):
+                print("Error")
 
             }
-        }
+            
     }
     
  }
-
+}
