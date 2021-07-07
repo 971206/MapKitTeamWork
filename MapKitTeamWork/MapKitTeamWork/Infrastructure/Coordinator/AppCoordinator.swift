@@ -23,8 +23,16 @@ final class AppCoordinator: CoordinatorProtocol {
         self.countryManager = CountryManager()
     }
     
+//    func start() {
+//        let vc = MainViewController.instantiateFromStoryboard()
+//        vc.coordinator = self
+//        navigationController?.pushViewController(vc, animated: true)
+//        window?.rootViewController = navigationController
+//        window?.makeKeyAndVisible()
+//    }
+    
     func start() {
-        let vc = MainViewController.instantiateFromStoryboard()
+        let vc = FirstViewController.instantiateFromStoryboard()
         vc.coordinator = self
         navigationController?.pushViewController(vc, animated: true)
         window?.rootViewController = navigationController
@@ -35,12 +43,12 @@ final class AppCoordinator: CoordinatorProtocol {
             navigationController?.popViewController(animated: true)
         }
     
-    func FirstRegisterVC() {
-        let vc = FirstViewController.instantiateFromStoryboard()
-        vc.coordinator = self
-        navigationController?.navigationBar.isHidden = true
-        navigationController?.pushViewController(vc, animated: true)
-    }
+//    func FirstRegisterVC() {
+//        let vc = FirstViewController.instantiateFromStoryboard()
+//        vc.coordinator = self
+//        navigationController?.navigationBar.isHidden = true
+//        navigationController?.pushViewController(vc, animated: true)
+//    }
 //    
 //    func myMapVC() {
 //        let vc = MyMapViewController.instantiateFromStoryboard()

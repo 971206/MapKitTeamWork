@@ -12,6 +12,7 @@ class FirstDataSource: NSObject, UITableViewDataSource {
     // MARK: - Private properties
     
     private var tableView: UITableView!
+    private var navigationController: UINavigationController?
 //    private var viewModel: FirstViewModelProtocol!
     private var countriesManager: CountryManagerProtocol!
     
@@ -65,7 +66,7 @@ extension FirstDataSource: UITableViewDelegate {
         let vc = sb.instantiateViewController(withIdentifier: "MyMapViewController") as! MyMapViewController
         vc.country = countriesList[indexPath.row].country
         vc.coordinates = countriesList[indexPath.row].coordinates
-        //navigationController?.pushViewController(vc, animated: true)
+        navigationController?.pushViewController(vc, animated: true)
     }
 }
 

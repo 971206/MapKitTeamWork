@@ -37,6 +37,9 @@ class FirstViewController: BaseViewController {
     private func configureViewModel() {
         countriesManager = CountryManager()
         dataSource = FirstDataSource(with: tableView, manager: countriesManager)
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
         
     }
     
