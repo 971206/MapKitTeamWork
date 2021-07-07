@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Map Det View Controller-->
+        <scene sceneID="cBK-Nr-CkK">
+            <objects>
+                <viewController storyboardIdentifier="MapDetViewController" id="xOc-bk-WeW" customClass="MapDetViewController" customModule="MapKitTeamWork" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yll-Yr-1nv">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Egc-1u-8Vh">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                            </mapView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Uug-KX-C9f"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Uug-KX-C9f" firstAttribute="bottom" secondItem="Egc-1u-8Vh" secondAttribute="bottom" id="6b9-Gw-TAZ"/>
+                            <constraint firstItem="Egc-1u-8Vh" firstAttribute="top" secondItem="Uug-KX-C9f" secondAttribute="top" id="IEf-00-YhD"/>
+                            <constraint firstItem="Uug-KX-C9f" firstAttribute="trailing" secondItem="Egc-1u-8Vh" secondAttribute="trailing" id="RXo-P6-VTq"/>
+                            <constraint firstItem="Egc-1u-8Vh" firstAttribute="leading" secondItem="Uug-KX-C9f" secondAttribute="leading" id="XRI-Xq-Bjz"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="map" destination="Egc-1u-8Vh" id="mgZ-bH-XM2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lb1-Zp-15G" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-701" y="199"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

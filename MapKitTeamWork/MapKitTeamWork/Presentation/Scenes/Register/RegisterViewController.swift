@@ -2,10 +2,14 @@
 //  RegisterViewController.swift
 //  MapKitTeamWork
 //
-//  Created by Macbook Air on 7/7/21.
+//  Created by Lizi Chichua on 7/7/21.
 //
 
 import UIKit
+
+class CellClass: UITableViewCell {
+    
+}
 
 class RegisterViewController: BaseViewController {
 
@@ -14,10 +18,35 @@ class RegisterViewController: BaseViewController {
     let transparentView = UIView()
     let tableView = UITableView()
     
+    var selectedButton = UIButton()
+    
+    var countries = [CountryModel]()
+    var countryManager: CountryManagerProtocol!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.register(CellClass.self, forCellReuseIdentifier: "Cell")
+        fetchCountriesData()
+    }
+    
+    func fetchCountriesData() {
+        countryManager = CountryManager()
+        countryManager.fetchInfo { res in
+            switch res {
+            case .failure(let err):
+                print("Failed: \(err)")
+            case .success(let countries):
+                
+                self.countries = countries.map{$0}
+                
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
+                }
+            }
+        }
     }
     
     func addTransparentView(frames: CGRect) {
@@ -35,12 +64,12 @@ class RegisterViewController: BaseViewController {
          transparentView.alpha = 0
          UIView.animate(withDuration: 0.4, delay: 0.0, usingSpringWithDamping: 1.0, initialSpringVelocity: 1.0, options: .curveEaseInOut, animations: {
              self.transparentView.alpha = 0.5
-             self.tableView.frame = CGRect(x: frames.origin.x, y: frames.origin.y + frames.height + 5, width: frames.width, height: 500)
+             self.tableView.frame = CGRect(x: frames.origin.x, y: frames.origin.y + frames.height, width: frames.width, height: 500)
          }, completion: nil)
      }
     
     @objc func removeTransparentView() {
-         let frames = selectCountryBtn.frame
+         let frames = selectedButton.frame
          UIView.animate(withDuration: 0.4, delay: 0.0, usingSpringWithDamping: 1.0, initialSpringVelocity: 1.0, options: .curveEaseInOut, animations: {
              self.transparentView.alpha = 0
              self.tableView.frame = CGRect(x: frames.origin.x, y: frames.origin.y + frames.height, width: frames.width, height: 0)
@@ -48,6 +77,29 @@ class RegisterViewController: BaseViewController {
     }
 
     @IBAction func onSelectCountry(_ sender: Any) {
+        selectedButton = selectCountryBtn
         addTransparentView(frames: selectCountryBtn.frame)
+    }
+}
+
+
+extension RegisterViewController: UITableViewDelegate, UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return countries.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+        cell.textLabel?.text = countries[indexPath.row].country
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let sb = UIStoryboard(name: "MapDetViewController", bundle: nil)
+        let vc = sb.instantiateViewController(withIdentifier: "MapDetViewController") as! MapDetViewController
+        vc.country = countries[indexPath.row].country
+        vc.coordinates = countries[indexPath.row].coordinates
+        navigationController?.pushViewController(vc, animated: true)
     }
 }
