@@ -67,6 +67,7 @@ extension FirstDataSource: UITableViewDelegate {
         vc.country = countriesList[indexPath.row].country
         vc.coordinates = countriesList[indexPath.row].coordinates
         navigationController?.pushViewController(vc, animated: true)
+        print("tap to open map")
     }
 }
 
