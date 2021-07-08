@@ -13,7 +13,6 @@ class FirstDataSource: NSObject, UITableViewDataSource {
     
     private var tableView: UITableView!
     private var navigationController: UINavigationController?
-//    private var viewModel: FirstViewModelProtocol!
     private var countriesManager: CountryManagerProtocol!
     
     private var countriesList = [CountryModel]()

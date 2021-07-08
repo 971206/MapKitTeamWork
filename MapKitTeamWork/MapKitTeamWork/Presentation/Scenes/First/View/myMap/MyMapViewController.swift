@@ -11,6 +11,7 @@ import MapKit
 
 class MyMapViewController: UIViewController {
 
+  
     @IBOutlet weak var myMap: MKMapView!
     
     var country: String?
