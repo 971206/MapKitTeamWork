@@ -29,16 +29,16 @@ class FirstDataSource: NSObject, UITableViewDataSource {
     }
     
     func refresh() {
-        countriesManager.fetchInfo { res in
+        countriesManager.fetchInfo { [weak self] res in
             switch res {
             case .failure(let err):
                 print("Failed: \(err)")
             case .success(let countries):
                 
-                self.countriesList = countries.map{$0}
-                
                 DispatchQueue.main.async {
-                    self.tableView.reloadData()
+                    print( self?.countriesList = countries.map{$0})
+
+                    self?.tableView.reloadData()
                 }
             }
         }

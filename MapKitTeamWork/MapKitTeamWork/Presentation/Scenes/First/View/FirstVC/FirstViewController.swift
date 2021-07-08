@@ -37,8 +37,9 @@ class FirstViewController: BaseViewController {
     private func configureViewModel() {
         countriesManager = CountryManager()
         dataSource = FirstDataSource(with: tableView, manager: countriesManager)
-        DispatchQueue.main.async {
-            self.tableView.reloadData()
+        DispatchQueue.main.async { [weak self] in
+            self?.dataSource.refresh()
+            self?.tableView.reloadData()
         }
         
     }
@@ -46,8 +47,9 @@ class FirstViewController: BaseViewController {
 
     @IBAction func onChooseCountry(_ sender: Any) {
         ChooseCountry = chosen
-        configureViewModel()
         transparentViewAdded(frames: ChooseCountry.frame)
+        configureViewModel()
+
     }
 }
 
