@@ -46,9 +46,9 @@ class FirstViewController: BaseViewController {
     
 
     @IBAction func onChooseCountry(_ sender: Any) {
-        ChooseCountry = chosen
+        chosen = ChooseCountry
         transparentViewAdded(frames: ChooseCountry.frame)
-        configureViewModel()
+     //   configureViewModel()
 
     }
 }

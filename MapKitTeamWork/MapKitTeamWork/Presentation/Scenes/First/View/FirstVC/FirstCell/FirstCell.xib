@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
@@ -60,9 +61,6 @@
                         </constraints>
                         <color key="tintColor" name="AccentColor"/>
                         <state key="normal" image="map.fill" catalog="system"/>
-                        <connections>
-                            <action selector="onSeeMap:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Y3o-qI-klP"/>
-                        </connections>
                     </button>
                 </subviews>
                 <constraints>
@@ -80,7 +78,7 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="coordinatesLabel" destination="zpJ-uv-0xP" id="ICh-fZ-SKD"/>
+                <outlet property="capitalNameLabel" destination="zpJ-uv-0xP" id="Rae-D9-LKB"/>
                 <outlet property="countryNameLabel" destination="RVO-pF-yCI" id="SBH-zG-xkO"/>
             </connections>
             <point key="canvasLocation" x="102.17391304347827" y="105.80357142857143"/>
