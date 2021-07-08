@@ -36,7 +36,7 @@ class FirstDataSource: NSObject, UITableViewDataSource {
             case .success(let countries):
                 
                 DispatchQueue.main.async {
-                    print( self?.countriesList = countries.map{$0})
+                    self?.countriesList = countries.map{$0}
 
                     self?.tableView.reloadData()
                 }

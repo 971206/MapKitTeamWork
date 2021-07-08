@@ -39,9 +39,9 @@ final class AppCoordinator: CoordinatorProtocol {
         window?.makeKeyAndVisible()
     }
     
-    func popViewController() {
-            navigationController?.popViewController(animated: true)
-        }
+//    func popViewController() {
+//            navigationController?.popViewController(animated: true)
+//        }
     
 //    func FirstRegisterVC() {
 //        let vc = FirstViewController.instantiateFromStoryboard()

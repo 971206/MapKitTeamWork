@@ -12,11 +12,7 @@ import UIKit
 class FirstCell: UITableViewCell {
 
     @IBOutlet weak var countryNameLabel: UILabel!
-    @IBOutlet weak var capitalNameLabel: UILabel!
-
-//    var storyboard = UIStoryboard(name: "MapViewController", bundle: nil)
-//    let navigationController = UINavigationController()
-    
+  
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -25,26 +21,10 @@ class FirstCell: UITableViewCell {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
-        // Configure the view for the selected state
     }
     
     func configure(with item: CountryModel) {
         countryNameLabel.text = item.country
-        capitalNameLabel.text = item.capital
-
       
     }
 }
-//    @IBAction func onSeeMap(_ sender: Any) {
-//        let vc = storyboard.instantiateViewController(withIdentifier: "MyMapViewController") as! MyMapViewController
-//        self.navigationController.pushViewController(vc, animated: true)
-//        print("tapped")
-//
-//    }
-//
-//
-//}
-//
-//protocol tapDelegate {
-//    func tapped(_ row: Int)
-//}

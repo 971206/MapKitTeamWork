@@ -20,14 +20,8 @@
                         <rect key="frame" x="16" y="10" width="70" height="134"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Country" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s6n-vx-seJ">
-                                <rect key="frame" x="0.0" y="0.0" width="70" height="54.5"/>
+                                <rect key="frame" x="0.0" y="0.0" width="70" height="134"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Capital" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HZZ-1z-hzi">
-                                <rect key="frame" x="0.0" y="79.5" width="70" height="54.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -40,13 +34,7 @@
                         <rect key="frame" x="91" y="10" width="304" height="134"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RVO-pF-yCI">
-                                <rect key="frame" x="0.0" y="0.0" width="304" height="54.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zpJ-uv-0xP">
-                                <rect key="frame" x="0.0" y="79.5" width="304" height="54.5"/>
+                                <rect key="frame" x="0.0" y="0.0" width="304" height="134"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -66,7 +54,6 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="capitalNameLabel" destination="zpJ-uv-0xP" id="Rae-D9-LKB"/>
                 <outlet property="countryNameLabel" destination="RVO-pF-yCI" id="SBH-zG-xkO"/>
             </connections>
             <point key="canvasLocation" x="102.17391304347827" y="105.80357142857143"/>
